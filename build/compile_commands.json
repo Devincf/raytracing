@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/lumi/code/projects/raytracing/build",
+  "command": "/bin/c++   -I/home/lumi/code/projects/raytracing/include   -Wall -Werror -g   -std=gnu++17 -o CMakeFiles/raytracing.dir/src/main.cpp.o -c /home/lumi/code/projects/raytracing/src/main.cpp",
+  "file": "/home/lumi/code/projects/raytracing/src/main.cpp"
+}
+]
