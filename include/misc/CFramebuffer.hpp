@@ -21,23 +21,19 @@ namespace devincf::raytracing::misc
             {
                 for(size_t c = 0;c<W;c++)
                 {
-                    float r = m_pixels[r][c].r();
-                    float g = m_pixels[r][c].g();
-                    float b = m_pixels[r][c].b();
-
                     if(c != 0) f << ' ';
 
-                    f << int(255.99*r) << ' ' << int(255.99*g) << ' ' << int(255.99*b);
+                    f << m_pixels[r][c];
                 }
                 f << '\n';
             }
         }
 
-        void set(int c, int r, const Vec3<float>& color)
+        void set(int c, int r, const Vec3<>& color)
         {
             m_pixels[r][c] = std::move(color);
         }
-        void set(int c, int r, Vec3<float>&& color)
+        void set(int c, int r, Vec3<>&& color)
         {
             m_pixels[r][c] = std::move(color);
         }
@@ -45,7 +41,7 @@ namespace devincf::raytracing::misc
         constexpr int width(){ return W;}
         constexpr int height(){ return H;}
         private:
-        std::array<std::array<Vec3<float>,W>,H> m_pixels;
+        std::array<std::array<Vec3<>,W>,H> m_pixels;
     };
 }
 
